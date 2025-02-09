@@ -25,19 +25,21 @@ def sortByFrequencyAndIndex(arr):
     values.sort(key=lambda x: (-x.count, x.index))
 
     k = 0
-    for data in values:
-        for j in range(data.count):
-            arr[k] = data.value
+    for item in values:
+        for j in range(item.count):
+            arr[k] = item.value
             k += 1
 
 if __name__ == '__main__':
-    arr = [3,3,1,1,1,8,3,6,1,7,8]
+    arr=[]
+    arr_s = int(input("enter array size: "))
+    for i in range(arr_s):
+        x = int(input("Enter element: "))
+        arr.append(x)
     print("Original:", arr)
     sortByFrequencyAndIndex(arr)
     print("Sorted:",arr)
 
- 
-	arr = [3, 3, 1, 1, 1, 8, 3, 6, 1, 7, 8]
-	print("Original:", arr)
-	sortByFrequencyAndIndex(arr)
-	print("Sorted:", arr)
+    print("Original:", arr)
+    sortByFrequencyAndIndex(arr)
+    print("Sorted:", arr)
